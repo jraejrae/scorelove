@@ -702,27 +702,29 @@
 </div>
 
 <script>
-  // Show modal after 5 seconds
-  setTimeout(() => {
-    document.getElementById('modalOverlay').classList.add('active');
-  }, 5000);
+  // Show modal after 5 seconds (once per session)
+  if (!sessionStorage.getItem('modalDismissed')) {
+    setTimeout(() => {
+      document.getElementById('modalOverlay').classList.add('active');
+    }, 5000);
+  }
+
+  function dismissModal() {
+    document.getElementById('modalOverlay').classList.remove('active');
+    sessionStorage.setItem('modalDismissed', '1');
+  }
 
   // Close on X button
-  document.getElementById('modalClose').addEventListener('click', () => {
-    document.getElementById('modalOverlay').classList.remove('active');
-  });
+  document.getElementById('modalClose').addEventListener('click', dismissModal);
 
   // Close on overlay click (outside modal box)
   document.getElementById('modalOverlay').addEventListener('click', function(e) {
-    if (e.target === this) {
-      this.classList.remove('active');
-    }
+    if (e.target === this) dismissModal();
   });
 
   // Close on Escape key
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.getElementById('modalOverlay').classList.remove('active');
+    if (e.key === 'Escape') dismissModal();
     }
   });
 
