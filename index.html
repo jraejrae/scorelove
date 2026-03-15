@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5P4G1R8KZS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5P4G1R8KZS');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>SCORE LOVE — Get In The Game</title>
@@ -325,6 +334,24 @@
     color: rgba(43, 58, 103, 0.3);
   }
 
+  /* Tour CTA link */
+  .tour-link {
+    background: #D4A843;
+    color: #2B3A67;
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    padding: 0.9rem 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    animation: tourPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes tourPulse {
+    0%, 100% { transform: scale(1); box-shadow: none; }
+    50% { transform: scale(1.04); box-shadow: 0 0 18px rgba(212, 168, 67, 0.5); }
+  }
+
   /* Gold accent line below logo */
   .accent-line {
     width: 60px;
@@ -502,81 +529,35 @@
       <span class="label">Chemistry</span>
     </div>
   </div>
+  <div style="text-align: center; margin-top: 2.5rem; opacity: 0; animation: fadeUp 0.8s 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;">
+    <a href="tour.html" class="tour-link">Take The Tour</a>
+  </div>
 </section>
 
 <div class="footer">&copy; 2026 Score Love — All Rights Reserved</div>
 
 <script>
-  const MAILCHIMP_URL = 'https://scorelove.us6.list-manage.com/subscribe/post-json';
-  const MAILCHIMP_U   = '9037448e64ef7b3450879f7b6';
-  const MAILCHIMP_ID  = 'd06b9dd652';
-
-  function handleSignup() {
-    const emailInput = document.getElementById('emailInput');
-    const submitBtn  = document.getElementById('submitBtn');
-    const formError  = document.getElementById('formError');
-    const email = emailInput.value.trim();
-
-    // Reset error
-    formError.style.display = 'none';
-    formError.textContent = '';
-    emailInput.style.outline = 'none';
-
-    // Validate
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email || !emailRegex.test(email)) {
-      emailInput.style.outline = '2px solid #C1553B';
-      formError.textContent = 'Please enter a valid email address.';
-      formError.style.display = 'block';
-      setTimeout(() => {
-        emailInput.style.outline = 'none';
-      }, 2500);
+  async function handleSignup() {
+    const email = document.getElementById('emailInput').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('emailInput').style.outline = '2px solid #C1553B';
+      setTimeout(() => { document.getElementById('emailInput').style.outline = 'none'; }, 1500);
       return;
     }
-
-    // Disable button while submitting
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'SENDING...';
-
-    // Build Mailchimp JSONP URL
-    const url = `${MAILCHIMP_URL}?u=${MAILCHIMP_U}&id=${MAILCHIMP_ID}&EMAIL=${encodeURIComponent(email)}&c=mailchimpCallback`;
-
-    // JSONP callback
-    window.mailchimpCallback = function(response) {
-      if (response.result === 'success' || response.msg.includes('already subscribed')) {
-        // Show success
-        document.getElementById('formContainer').style.display = 'none';
-        document.getElementById('formNote').style.display = 'none';
-        formError.style.display = 'none';
-        const success = document.getElementById('successMsg');
-        success.classList.add('visible');
-      } else {
-        // Show error from Mailchimp
-        let msg = response.msg || 'Something went wrong. Please try again.';
-        // Strip HTML from Mailchimp error messages
-        msg = msg.replace(/<[^>]*>/g, '').replace(/^\d+ - /, '');
-        formError.textContent = msg;
-        formError.style.display = 'block';
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'TEE ME UP';
-      }
-
-      // Clean up script tag
-      const scriptTag = document.getElementById('mc-script');
-      if (scriptTag) scriptTag.remove();
-    };
-
-    // Inject JSONP script
-    const script = document.createElement('script');
-    script.id = 'mc-script';
-    script.src = url;
-    script.onerror = function() {
-      formError.textContent = 'Connection error. Please try again.';
-      formError.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'TEE ME UP';
-    };
-    document.body.appendChild(script);
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('u', '9037448e64ef7b3450879f7b6');
+    formData.append('id', 'd06b9dd652');
+    try {
+      await fetch('https://scorelove.us6.list-manage.com/subscribe/post', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+    } catch (e) {}
+    document.getElementById('formContainer').style.display = 'none';
+    document.querySelector('.form-note').style.display = 'none';
+    document.getElementById('successMsg').classList.add('visible');
   }
 
   // Enter key support
