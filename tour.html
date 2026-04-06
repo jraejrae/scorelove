@@ -90,35 +90,19 @@
   /* Hero */
   .tour-hero {
     text-align: center;
-    padding: 2.5rem 1.5rem 2.5rem;
+    padding: 0 1.5rem 0;
   }
 
-  /* Logo lockup — "SCORE LOVE on TOUR" framed */
+  /* Logo lockup — SVG image */
   .tour-logo-lockup {
     display: inline-block;
-    border: 3px solid var(--navy);
-    padding: 2.5rem 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.25rem;
   }
 
-  .tour-logo-lockup .logo-main {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    font-size: clamp(3.5rem, 10vw, 5.5rem);
-    line-height: 0.9;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--navy);
-  }
-
-  .tour-logo-lockup .logo-on-tour {
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(1.3rem, 3.5vw, 2rem);
-    color: var(--navy);
-    margin-top: 0.25rem;
-    letter-spacing: 0.08em;
+  .tour-logo-lockup img {
+    width: min(420px, 80vw);
+    height: auto;
+    display: block;
   }
 
   .tour-hero .tour-subtitle {
@@ -138,7 +122,7 @@
     width: 60px;
     height: 3px;
     background: var(--gold);
-    margin: 1.5rem auto;
+    margin: 1rem auto;
   }
 
   /* Tour stops */
@@ -499,16 +483,9 @@
     .tour-nav {
       padding: 1rem 1.25rem;
     }
-
-    .tour-logo-lockup {
-      padding: 2rem 2.5rem;
-    }
   }
 
   @media (max-width: 540px) {
-    .tour-logo-lockup {
-      padding: 1.5rem 1.75rem;
-    }
 
     .tour-stop {
       gap: 1rem;
@@ -547,14 +524,6 @@
   }
 
   @media (max-width: 360px) {
-    .tour-logo-lockup {
-      padding: 1.25rem 1.25rem;
-    }
-
-    .tour-logo-lockup .logo-main {
-      font-size: 2.8rem;
-    }
-
     .stop-city {
       font-size: 0.95rem;
     }
@@ -571,8 +540,7 @@
 
 <section class="tour-hero">
   <div class="tour-logo-lockup">
-    <div class="logo-main">SCORE<br>LOVE</div>
-    <div class="logo-on-tour">on TOUR</div>
+    <img src="tour-logo.svg" alt="Score Love on Tour">
   </div>
   <p class="tour-subtitle">Seven cities. Seven nights. And a shot at something real.</p>
   <div class="accent-line"></div>
@@ -589,7 +557,7 @@
       <div class="stop-city">Nashville</div>
       <div class="stop-venue">Puttshack Nashville</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-nashville-tickets-1986551410746?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -601,7 +569,7 @@
       <div class="stop-city">Dallas</div>
       <div class="stop-venue">Puttshack Dallas</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-dallas-tickets-1986777467889?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -613,7 +581,7 @@
       <div class="stop-city">Scottsdale</div>
       <div class="stop-venue">Puttshack Scottsdale</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-scottsdale-tickets-1986777658459?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -625,7 +593,7 @@
       <div class="stop-city">Denver</div>
       <div class="stop-venue">Puttshack Denver</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-denver-tickets-1986777675510?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -637,7 +605,7 @@
       <div class="stop-city">Boston</div>
       <div class="stop-venue">Puttshack Boston</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-boston-tickets-1986777715630?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -649,7 +617,7 @@
       <div class="stop-city">Philadelphia</div>
       <div class="stop-venue">Puttshack Philadelphia</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-philadelphia-tickets-1986777723654?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
   <div class="tour-stop">
@@ -661,7 +629,7 @@
       <div class="stop-city">Pittsburgh</div>
       <div class="stop-venue">Puttshack Pittsburgh</div>
     </div>
-    <a href="#" class="stop-badge" onclick="return false;">Coming Soon</a>
+    <a href="https://www.eventbrite.com/e/score-love-singles-mixer-mini-golf-dating-at-puttshack-pittsburgh-tickets-1986777741708?utm-campaign=social&amp;utm-content=attendeeshare&amp;utm-medium=discovery&amp;utm-term=listing&amp;utm-source=cp&amp;aff=ebdsshcopyurl" class="stop-badge" target="_blank" rel="noopener">Get Tickets</a>
   </div>
 
 </div>
