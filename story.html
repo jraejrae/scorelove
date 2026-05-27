@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5P4G1R8KZS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5P4G1R8KZS');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SCORE LOVE — The Story</title>
+
+<meta name="description" content="Score Love started with a tee time. The story behind the brand built on real-life chemistry.">
+<meta property="og:title" content="SCORE LOVE — The Story">
+<meta property="og:description" content="How a chance meeting on a golf course became a brand.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scorelove.com/story.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #2B3A67;
+    --cream: #f2f2e6;
+    --gold: #D4A843;
+    --warm-white: #FAF8F2;
+    --dark: #1A2340;
+    --rust: #C1553B;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--cream);
+    color: var(--navy);
+    font-family: 'Source Serif 4', Georgia, serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .stripe-bar {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      var(--navy) 0px,
+      var(--navy) 40px,
+      var(--gold) 40px,
+      var(--gold) 44px
+    );
+  }
+
+  .top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2rem 0;
+  }
+
+  .home-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.5;
+    text-decoration: none;
+    transition: opacity 0.25s, color 0.25s;
+  }
+
+  .home-link:hover {
+    opacity: 1;
+    color: var(--gold);
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-nav .nav-link {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    opacity: 0.55;
+    text-decoration: none;
+    transition: opacity 0.25s, color 0.25s;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .site-nav .nav-link:hover {
+    opacity: 1;
+    color: var(--gold);
+  }
+
+  .site-nav .nav-link.active {
+    color: var(--gold);
+    opacity: 1;
+  }
+
+  .site-nav .nav-dot {
+    color: rgba(43, 58, 103, 0.3);
+    font-size: 0.7rem;
+    user-select: none;
+  }
+
+  .page-hero {
+    text-align: center;
+    padding: 3rem 1.5rem 1rem;
+  }
+
+  .page-eyebrow {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .accent-line {
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    margin: 1.25rem auto;
+  }
+
+  .page-deck {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(1.1rem, 2.6vw, 1.4rem);
+    color: var(--navy);
+    opacity: 0.8;
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  /* Editorial origin section */
+  .origin {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid rgba(43, 58, 103, 0.12);
+  }
+
+  .origin-body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.85;
+    color: var(--navy);
+    opacity: 0.9;
+  }
+
+  .origin-body p {
+    margin-bottom: 1.25rem;
+  }
+
+  .origin-body p:first-of-type::first-letter {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    float: left;
+    line-height: 0.9;
+    padding: 0.35rem 0.65rem 0 0;
+    color: var(--gold);
+  }
+
+  .pull-quote {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-top: 1px solid rgba(43, 58, 103, 0.12);
+    border-bottom: 1px solid rgba(43, 58, 103, 0.12);
+    margin: 2rem 0;
+  }
+
+  .pull-quote .accent {
+    color: var(--gold);
+  }
+
+  /* POV section */
+  .pov {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid rgba(43, 58, 103, 0.12);
+  }
+
+  .section-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+  }
+
+  .section-headline {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+  }
+
+  .section-body {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--navy);
+    opacity: 0.85;
+  }
+
+  .section-body p + p {
+    margin-top: 1rem;
+  }
+
+  /* Founder bio */
+  .founder {
+    padding: 3rem 0 2rem;
+  }
+
+  .founder-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: clamp(1.3rem, 3.5vw, 1.7rem);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+  }
+
+  .founder-title {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(43, 58, 103, 0.65);
+    margin-bottom: 1.25rem;
+  }
+
+  .founder-bio {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--navy);
+    opacity: 0.85;
+  }
+
+  .founder-bio p + p {
+    margin-top: 0.85rem;
+  }
+
+  /* Email capture */
+  .cta-block {
+    text-align: center;
+    padding: 3rem 1.5rem 1.5rem;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .cta-text {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    color: var(--navy);
+    opacity: 0.75;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .signup-box {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    display: flex;
+    gap: 0;
+    border: 2.5px solid var(--navy);
+    overflow: hidden;
+    background: var(--warm-white);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .form-container:focus-within {
+    box-shadow: 0 0 0 4px rgba(43, 58, 103, 0.1), 0 8px 32px rgba(43, 58, 103, 0.12);
+  }
+
+  .form-container input[type="email"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 1rem 1.25rem;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 1rem;
+    color: var(--navy);
+    background: transparent;
+    min-width: 0;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+
+  .form-container input[type="email"]::placeholder {
+    color: rgba(43, 58, 103, 0.4);
+    font-style: italic;
+  }
+
+  .form-container button {
+    border: none;
+    background: var(--navy);
+    color: var(--cream);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 1.75rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 48px;
+  }
+
+  .form-container button:hover {
+    background: var(--dark);
+    letter-spacing: 0.28em;
+  }
+
+  .form-note {
+    text-align: center;
+    margin-top: 0.85rem;
+    font-size: 0.78rem;
+    color: rgba(43, 58, 103, 0.45);
+    font-style: italic;
+  }
+
+  .success-message {
+    display: none;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .success-message.visible {
+    display: block;
+    animation: fadeUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .success-message .checkmark {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+
+  .success-message .success-sub {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: rgba(43, 58, 103, 0.7);
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .footer {
+    padding: 2rem 1rem;
+    padding-bottom: max(2rem, env(safe-area-inset-bottom, 0px));
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(43, 58, 103, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .top-bar {
+      padding: 1rem 1.25rem 0;
+      flex-direction: column;
+      gap: 0.85rem;
+      align-items: center;
+    }
+
+    .page-hero {
+      padding: 2rem 1.25rem 0.5rem;
+    }
+
+    .content {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .origin-body {
+      font-size: 1.05rem;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .site-nav {
+      gap: 0.15rem;
+    }
+
+    .site-nav .nav-link {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      padding: 0.3rem 0.35rem;
+    }
+
+    .form-container {
+      flex-direction: column;
+    }
+
+    .form-container input[type="email"] {
+      padding: 1rem;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .form-container button {
+      padding: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="stripe-bar"></div>
+
+<div class="top-bar">
+  <a href="index.html" class="home-link">&#8592; Score Love</a>
+  <nav class="site-nav">
+    <a href="show.html" class="nav-link">The Show</a>
+    <span class="nav-dot">·</span>
+    <a href="tour.html" class="nav-link">The Tour</a>
+    <span class="nav-dot">·</span>
+    <a href="story.html" class="nav-link active">The Story</a>
+  </nav>
+</div>
+
+<section class="page-hero">
+  <div class="page-eyebrow">Origin</div>
+  <h1 class="page-title">The Story</h1>
+  <div class="accent-line"></div>
+  <p class="page-deck">It started with a tee time.</p>
+</section>
+
+<div class="content">
+
+  <!-- JULIA: edit this origin copy to match the version you want public. -->
+  <div class="origin">
+    <div class="origin-body">
+      <p>Score Love was born on a golf course. Founder Julia Rae was randomly paired with a stranger one afternoon. By the back nine, she knew. They fell in love.</p>
+      <p>She built Score Love because that moment &mdash; unscripted, un-swipeable, in-real-life &mdash; is the one she wants more people to have. No algorithms. No endless swiping. A round of golf, a leaderboard, and the perfect pace of play.</p>
+    </div>
+  </div>
+
+  <p class="pull-quote">Love doesn&rsquo;t happen on an app. <span class="accent">It happens on the course.</span></p>
+
+  <div class="pov">
+    <div class="section-label">Our Point of View</div>
+    <h2 class="section-headline">Real life, first.</h2>
+    <div class="section-body">
+      <p>We believe the best love stories start where the phones go away. On the course, at the range, on the cart path between holes. Score Love exists to put more people in the rooms &mdash; and on the greens &mdash; where chemistry can actually find them.</p>
+      <p>We&rsquo;re not anti-app. We&rsquo;re pro-real-life. A live tour, a TV show, a community of golfers who would rather meet someone over eighteen holes than over eighteen swipes.</p>
+    </div>
+  </div>
+
+  <div class="founder">
+    <div class="section-label">Meet the Founder</div>
+    <div class="founder-name">Julia Rae</div>
+    <p class="founder-title">Founder &amp; CEO, Score Love</p>
+    <!-- JULIA: edit the bio to whatever you want public. -->
+    <div class="founder-bio">
+      <p>Julia Rae is a multi-hyphenate creative based in Santa Monica &mdash; actress, singer, writer, golfer, and public speaker. Her credits include ABC&rsquo;s <em>The Bachelor Presents: Listen to Your Heart</em>, a starring role in the Amazon film <em>Playing Through</em>, and reporting at 6ABC Philadelphia.</p>
+      <p>She is also a marathoner who has run the NYC Marathon for the Boomer Esiason Foundation, a cystic fibrosis advocate, and the founder of <em>Singing at the Top of My Lungs</em>, a nonprofit supporting music therapy and child life programs in children&rsquo;s hospitals.</p>
+      <p>She founded Score Love to build the kind of love story that doesn&rsquo;t fit on a dating app.</p>
+    </div>
+  </div>
+
+</div>
+
+<section class="cta-block">
+  <p class="cta-text">Want to be part of the story? Get on the list.</p>
+  <div class="signup-box" id="storySignupBox">
+    <div class="form-container" id="storyFormContainer">
+      <input type="email" id="storyEmailInput" placeholder="your best email..." required>
+      <button onclick="storySignup()">TEE ME UP</button>
+    </div>
+    <p class="form-note">No spam &mdash; just the good stuff.</p>
+    <div class="success-message" id="storySuccessMsg">
+      <div class="checkmark">YOU&rsquo;RE ON THE TEE SHEET &#10003;</div>
+      <p class="success-sub">We&rsquo;ll be in touch soon. Fore play starts here.</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">&copy; 2026 Score Love &mdash; All Rights Reserved</div>
+
+<script>
+  async function storySignup() {
+    const email = document.getElementById('storyEmailInput').value;
+    if (!email || !email.includes('@')) {
+      document.getElementById('storyEmailInput').style.outline = '2px solid #C1553B';
+      setTimeout(() => { document.getElementById('storyEmailInput').style.outline = 'none'; }, 1500);
+      return;
+    }
+    const formData = new FormData();
+    formData.append('EMAIL', email);
+    formData.append('u', '9037448e64ef7b3450879f7b6');
+    formData.append('id', 'd06b9dd652');
+    try {
+      await fetch('https://scorelove.us6.list-manage.com/subscribe/post', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      });
+    } catch (e) {}
+    document.getElementById('storyFormContainer').style.display = 'none';
+    document.querySelector('.cta-block .form-note').style.display = 'none';
+    document.getElementById('storySuccessMsg').classList.add('visible');
+  }
+
+  document.getElementById('storyEmailInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') storySignup();
+  });
+</script>
+
+</body>
+</html>
